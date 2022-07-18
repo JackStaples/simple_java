@@ -1,5 +1,7 @@
 # Primitives
 
+[Home](index.md)
+
 Java has support for eight **primitive data types**
 
 * byte: an 8-bit signed integer
