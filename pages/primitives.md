@@ -41,27 +41,12 @@ int inty = 100_000_000;
 
 ```java
 long long = 42l;
-```
-
-ints can also be stored, but dont do this.
-
-```java
-long long = 2147483647;
-```
-it will no longer compile when you exceed the maximum int value; this next line breaks!
-
-```java
-long long = 2147483648;
-```
-its simple to fix though, just make it a long using L (or l)
-
-```
 long long = 2147483648L;
 ```
 
 ### float
 
-a float should usually end with an f
+float and double are used for floating point (decimal) values. A float should end with a f.
 
 ```java
 float floaty = 1.234f;
@@ -93,4 +78,59 @@ since char is an integer representing a character it can also be assigned number
 # these two chars are equal
 char chary = 'A';
 char aLittleChary = 65;
+```
+
+## Working with literals
+
+### Literals
+
+When a number is written out in the code, it is a literal.
+
+For example, the number '100' below is a literal value:
+
+```java
+int literal = 100;
+```
+
+They can also use bases other than base 10
+
+```java
+# hexidecimal - 0x prefix
+int hex = 0xBB;
+# Octal - 0 prefix
+int oct = 034;
+# Binary - 0b prefix
+int bin = 0b10;
+```
+
+### Underscores
+
+As you saw in a few examples above, underscore(_) characters can be used in numeric literals to make them easier to read.
+
+```java
+short shorty = 1_000;
+int inty = 100_000_000;
+long longy 100_000_000_000_000L;
+```
+
+#### Underscores can go anywhere except in a literal, except
+
+at the beginning, or the end, of a literal:
+
+```java
+int illegalInt1 = _100_000_000; // BREAKS!
+int illegalInt2 = 100_000_000_; // BREAKS!
+```
+
+right after, or right before, a decimal point:
+
+```java
+double illegalDouble1 = 12._123; // BREAKS!
+double illegalDouble2 = 12_.123; // BREAKS!
+```
+
+It is legal to use multiple undescores in row
+
+```java
+int legalButGross = 1_____________1; // 11
 ```
