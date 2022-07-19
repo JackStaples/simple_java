@@ -2,9 +2,11 @@
 
 [Home](../index.md)
 
-Java has eight **primitive data types**
+## Primitive Data Types
 
-| Data Type | Size(bits) | Range | Default Value |
+Java has eight primitive data types
+
+| Type | Size(bits) | Range | Default |
 | --- | --- | --- | --- |
 | [byte](#byte) | 8 | -128 to 127 | 0 |
 | [short](#short) | 16 | -32,768 to 32,767 | 0 |
@@ -15,65 +17,80 @@ Java has eight **primitive data types**
 | [boolean](#boolean) | 1 | *true* or *false* | false |
 | [char](#char) | 2 | Unicode characters | '\u0000' |
 
-## byte
+### byte
 
 ```java
 byte bytey = 100;
 ```
 
-## short
+### short
 
 ```java
 short shorty = 1_000;
 ```
 
-## int
+### int
 
 ```java
 int inty = 100_000_000;
 ```
 
-## long
+### long
+
+ A long value should end with the L (or l) distinguisher
 
 ```java
-# A long value should end with the L (or l) distinguisher
 long long = 42l;
-# ints can also be stored, but dont do this
+```
+
+ints can also be stored, but dont do this.
+
+```java
 long long = 2147483647;
-# it will no longer compile when you exceed the maximum int value; this next line breaks!
+```
+it will no longer compile when you exceed the maximum int value; this next line breaks!
+
+```java
 long long = 2147483648;
-# its simple to fix though, just use L (or l)
+```
+its simple to fix though, just make it a long using L (or l)
+
+```
 long long = 2147483648L;
 ```
 
-## float
+### float
+
+a float should usually end with an f
 
 ```java
-# a float should usually end with an f
 float floaty = 1.234f;
 ```
 
-## double
+### double
+
+doubles can be specified with a d (or D), but its not necessary as this is the default
 
 ```java
-# doubles can be specified with a d (or D), but its not necessary as this is the default
 double doubly = 1.2345678;
 double moreDoubly = 1.2345678D;
 ```
 
-## boolean
+### boolean
+
+boolean is easy, it only has two possible values
 
 ```java
-# boolean is easy, it only has two possible values
 boolean truthy = true;
 boolean falsy = false;
 ```
 
-## char
+### char
+
+since char is an integer representing a character it can also be assigned numbers
 
 ```java
-char chary = 'A';
-# since char is an integer representing a character it can also be assigned numbers
-char aLittleChary = 65;
 # these two chars are equal
+char chary = 'A';
+char aLittleChary = 65;
 ```
