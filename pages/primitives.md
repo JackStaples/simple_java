@@ -40,13 +40,13 @@ int inty = 100_000_000;
  A long value should end with the L (or l) distinguisher
 
 ```java
-long long = 42l;
-long long = 2147483648L;
+long longy = 42l;
+long longyq = 2147483648L;
 ```
 
 ### float
 
-float and double are used for floating point (decimal) values. A float should end with a f.
+A float is a decimal value, and should always end with a f.
 
 ```java
 float floaty = 1.234f;
@@ -54,7 +54,7 @@ float floaty = 1.234f;
 
 ### double
 
-doubles can be specified with a d (or D), but its not necessary as this is the default
+doubles can be specified with a d (or D), but its not necessary as they are the default for numeric decimal values.
 
 ```java
 double doubly = 1.2345678;
@@ -75,14 +75,12 @@ boolean falsy = false;
 since char is an integer representing a character it can also be assigned numbers
 
 ```java
-# these two chars are equal
+// these two chars are equal
 char chary = 'A';
 char aLittleChary = 65;
 ```
 
-## Working with literals
-
-### Literals
+## Literals
 
 When a number is written out in the code, it is a literal.
 
@@ -95,17 +93,41 @@ int literal = 100;
 They can also use bases other than base 10
 
 ```java
-# hexidecimal - 0x prefix
+// hexidecimal - 0x prefix
 int hex = 0xBB;
-# Octal - 0 prefix
+// Octal - 0 prefix
 int oct = 034;
-# Binary - 0b prefix
+// Binary - 0b prefix
 int bin = 0b10;
 ```
 
-### Underscores
+### Types of Literals
 
-As you saw in a few examples above, underscore(_) characters can be used in numeric literals to make them easier to read.
+#### Numerics
+
+The byte, short, int, and long types hold numbers without any decimal places. These integral values are Java's numeric literals.
+
+Numeric literals are all signed, meaning they reserve one bit to indicate if the number is positive or negative.
+
+#### Floating Point
+
+The float and double primitives represent floating point (decimal) values.
+
+If a decimal is present in a numeric literal the compiler will assume it is a double unless it is marked with an F (or f).
+
+#### String and Character literals
+
+String (covered later) and char literals encode Unicode characters. Unicode values can be specified using the Unicode escape character \u followed by the encoding for the value.
+
+```java
+char example = '\u0108' // Ĉ
+```
+
+Always use 'single quotes' for char literals.
+
+### Underscores for Formatting
+
+As you saw in a few examples above, underscore '_' characters can be used in numeric literals to make them easier to read.
 
 ```java
 short shorty = 1_000;
@@ -113,24 +135,60 @@ int inty = 100_000_000;
 long longy 100_000_000_000_000L;
 ```
 
-#### Underscores can go anywhere except in a literal, except
+#### Illegal Underscore Usage
 
-at the beginning, or the end, of a literal:
-
-```java
-int illegalInt1 = _100_000_000; // BREAKS!
-int illegalInt2 = 100_000_000_; // BREAKS!
-```
-
-right after, or right before, a decimal point:
+Underscores cannot go at the beginning, or the end, of a literal:
 
 ```java
-double illegalDouble1 = 12._123; // BREAKS!
-double illegalDouble2 = 12_.123; // BREAKS!
+int thisBreaks = _100_000_000;
+int thisBreaksToo = 100_000_000_;
 ```
 
-It is legal to use multiple undescores in row
+Right after, or right before, a decimal point:
+
+```java
+double thisBreaks = 12._123;
+double thisBreaksToo = 12_.123;
+```
+
+Right before an F or L suffix:
+
+```java
+float thisBreaks = 42_f;
+float thisBreaksToo = 42_L;
+```
+
+Finally, they cannot be used in a base prefix:
+
+```java
+int thisBreaks 0_x34;
+```
+
+#### Legal Underscore Usage
+
+It is possible, but a little ugly, to have multiple underscores in a row:
 
 ```java
 int legalButGross = 1_____________1; // 11
 ```
+
+You can also use them in non-base 10 literals:
+
+```java
+int hex = 0xB_B;
+```
+
+## Summary
+
+Java has 8 different primitives:
+
+byte, short, int, long, float, double, char, and boolean.
+
+When primitives are assigned a value, a number or character is written directly in the code to specify its value. Those numbers or characters are called literals.
+
+- The numeric literals are byte, short, int, and long
+- The floating point literals are float and double
+- The character literal is char
+- Finally, the boolean literal is simply true or false
+
+Numeric literals can have underscores in them to help with formatting.
