@@ -1,0 +1,3 @@
+# Strings
+
+[Home](../index.md)
