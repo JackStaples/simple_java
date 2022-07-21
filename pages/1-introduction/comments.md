@@ -1,6 +1,8 @@
 # Comments
 
-[Home](../index.md)
+| [Home](../../index.md) | [Section](./index.md) |
+
+---
 
 When writing code, there are times we want to leave a message for anyone else who will work with our code (or frequently for your future self). However we don't want those messages to affect the code. Luckily Java has comments.
 

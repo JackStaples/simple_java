@@ -1,6 +1,8 @@
 # Primitives
 
-[Home](../index.md)
+| [Home](../../index.md) | [Section](./index.md) |
+
+---
 
 Java has eight primitive data types
 
