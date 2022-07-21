@@ -2,8 +2,6 @@
 
 [Home](../index.md)
 
-## Primitive Data Types
-
 Java has eight primitive data types
 
 | Type | Size(bits) | Range | Default |
@@ -17,25 +15,25 @@ Java has eight primitive data types
 | [boolean](#boolean) | 1 | *true* or *false* | false |
 | [char](#char) | 2 | Unicode characters | '\u0000' |
 
-### byte
+## byte
 
 ```java
 byte bytey = 100;
 ```
 
-### short
+## short
 
 ```java
 short shorty = 1_000;
 ```
 
-### int
+## int
 
 ```java
 int inty = 100_000_000;
 ```
 
-### long
+## long
 
  A long value should end with the L (or l) distinguisher
 
@@ -44,7 +42,7 @@ long longy = 42l;
 long longyq = 2147483648L;
 ```
 
-### float
+## float
 
 A float is a decimal value, and should always end with a f.
 
@@ -52,7 +50,7 @@ A float is a decimal value, and should always end with a f.
 float floaty = 1.234f;
 ```
 
-### double
+## double
 
 doubles can be specified with a d (or D), but its not necessary as they are the default for numeric decimal values.
 
@@ -61,7 +59,7 @@ double doubly = 1.2345678;
 double moreDoubly = 1.2345678D;
 ```
 
-### boolean
+## boolean
 
 boolean is easy, it only has two possible values
 
@@ -70,7 +68,7 @@ boolean truthy = true;
 boolean falsy = false;
 ```
 
-### char
+## char
 
 since char is an integer representing a character it can also be assigned numbers
 
@@ -125,7 +123,7 @@ char example = '\u0108' // Ĉ
 
 Always use 'single quotes' for char literals.
 
-### Underscores for Formatting
+### Underscores
 
 As you saw in a few examples above, underscore '_' characters can be used in numeric literals to make them easier to read.
 
