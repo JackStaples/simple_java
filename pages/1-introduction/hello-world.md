@@ -1,7 +1,7 @@
 
 # Hello World
 
-| [Home](../../index.md) | [Section](./index.md) |
+| [Home](../../index.md) | [Introduction](./index.md) |
 
 ___
 The simplest Java program one can write looks something like this:

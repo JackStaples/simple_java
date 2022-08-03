@@ -1,10 +1,12 @@
-# Primitives
+# Primitive Data Types
 
-| [Home](../../index.md) | [Section](./index.md) |
+| [Home](../../index.md) | [Introduction](./index.md) |
 
 ---
 
-Java has eight primitive data types
+Java has two kinds of data types: **Primitive** and **Reference**. Primitive data types are relatively simple and serve as the building blocks for most programs.
+
+Below are the different types of primitives in Java:
 
 | Type | Size(bits) | Range | Default |
 | --- | --- | --- | --- |
@@ -82,7 +84,7 @@ char aLittleChary = 65;
 
 ## Literals
 
-When a number is written out in the code, it is a literal.
+When declaring primitives, you are often writing out values directly in the code. These values are called **literals**.
 
 For example, the number '100' below is a literal value:
 

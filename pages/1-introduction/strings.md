@@ -1,5 +1,5 @@
 # Strings
 
-| [Home](../../index.md) | [Section](./index.md) |
+| [Home](../../index.md) | [Introduction](./index.md) |
 
 ---
